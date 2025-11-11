@@ -23,6 +23,14 @@ jobs:
         with:
           node-version: '22.x'
 
+      - name: Check package.json location
+  run: |
+    echo "Current working directory:"
+    pwd
+    echo "Listing package.json files:"
+    find . -name "package.json"
+
+
       - name: npm install, build, and test
         run: |
           npm install
